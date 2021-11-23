@@ -1,4 +1,3 @@
-
 /*
 Theme Name: Landing Page Kenzie Academy
 Theme URI: https://kenzie.com.br/
@@ -7,7 +6,6 @@ Author URI: https://kenzie.com.br/
 Description: Descrção do thema.
 Version: 1.0
 Text Domain: https://kenzie.com.br/
-
 --------------------------------------------
 ESTRUTURAÇÃO BASE
 --------------------------------------------
@@ -19,7 +17,6 @@ ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 **** EXTRAS
 **** @MEDIA
-
 family=Montserrat -> Menus
 family=Lato -> Títulos, textos
 */
@@ -29,7 +26,13 @@ family=Lato -> Títulos, textos
 /* FONTS */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+    --color-white: #ffffff;
+    --color-softgrey: #818181;
+    --color-grey: #303030;
+    --color-darkblue: #00043e;
+    --color-softblue: #007aff;
+}
   
 /* GERAL */
 html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
@@ -39,9 +42,9 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     font-family: sans-serif;
     list-style: none;
 }
-img{
-    max-width: 800px;
-}
+figcaption { display: none;}
+
+
 div.flex{
     display: flex;
 }
@@ -67,13 +70,303 @@ html{}
 /* HTML */
   
 /* BODY */
-body{}
+body{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'lato';
+    
+}
 /* BODY */
   
 /* HEADER */
-header{}
+header{
+    background-color: var(--color-darkblue);
+     display: flex;
+     width: 100vw;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;  
+    color:rgb(204, 198, 198); 
+    font-size:150%; 
+}
+
+
+
+img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+    
+}
+
+nav li {
+    padding: 20px 20px 0px 20px;
+    
+}
+nav ul a{
+    color: white;
+    font-size: 13px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+div.large-container{
+    display: flex;  
+    
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+
+
+nav ul {
+    display: block;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70vw;
+    padding: 0px 50px 0px 50px;
+    list-style-type: none;
+    text-decoration-color: white;
+  }
+
+div.full-container{
+    width: 100%;
+    max-width: 1850px;
+    margin:0 auto;
+}
 /* HEADER */
   
+/* SECAO DESTAQUE */
+
+.secaoDestaque{
+    background-image: url(./../img/background-destaque.webp);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    display: flex;
+    
+}
+
+.secaoDestaque h2{
+    text-align: center;
+    margin-top: 25px;
+    color: var(--color-white);
+    font-family: 'Montserrat';
+    font-size: 63px;
+}
+
+.secaoDestaque p{
+    font-size: 21px;
+    font-family: 'Lato';
+    color: var(--color-white);
+}
+
+.secaoDestaqueFormulario{
+    display: flex;
+}
+
+.secaoDestaqueFormulario input{
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px 0px 0px 8px;
+    border: 5px var(--color-softgrey);
+    
+}
+
+.secaoDestaqueFormulario button{
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+    border-radius: 0 15% 15% 0;
+    background-color: var(--color-softblue);
+    cursor: pointer;
+    height: 36px;
+    margin-bottom:12px;
+    
+}
+
+.secaoDestaque .secaoDestaqueFormulario button:hover{
+    background-color:var(--color-softgrey);
+}
+
+/* SECAO SOBRE */
+
+.secaoSobre {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+}
+
+.secaoSobre h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-grey);
+    padding: 100px 60px 50px 60px;
+}
+
+.secaoSobre p {
+    font-family: 'Lato', sans-serif;
+    font-size: 19px;
+    color: var(--color-grey);
+    padding: 10px 50px;
+    margin: 10px;
+    
+}
+
+.secaoSobre span {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: var(--color-white);
+    padding: 10px 50px;
+    margin: 10px;
+}
+
+.secaoSobre button {
+    width: 300px;
+    height: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 19px;
+    color: var(--color-grey);
+    background-color: var(--color-white);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px 50px;
+}
+
+.secaoSobre button:active {
+    background-color: var(--color-softblue);
+    color: var(--color-softblue);
+}
+
+.secaoSobre ul {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 70px 18px 18px 18px;
+    margin: 5px;
+    color: var(--color-softgrey);
+    list-style: inside;
+    list-style-position: outside;
+    font-family: 'Lato', sans-serif;
+}
+
+.secaoSobre li {
+    padding: 4px;
+}
+
+/* flex-col Inicio */
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-col figure figcaption {
+    display: none;
+}
+
+.flex-col--destaque1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-col--destaque2 img{
+    width: 200px;
+    height: 300px;
+}
+
+.flex-col--destaque1 img {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.flex-col--destaque2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 50px;
+}
+
+.flex-col--destaque2 h2 {
+    width: 350px;
+    text-align: center;
+    padding: 5px 60px;
+}
+
+.flex-col--destaque2 img {
+    width: 200px;
+    margin: 50px 50px 25px;
+    padding-top: 50px;
+}
+
+/* SECAO-CURSOS */
+
+.secaoCursos { 
+    margin: 0 auto; 
+    text-align: center; 
+
+}
+
+.secaoCursos {
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    justify-content: center;
+    margin: 50px 80px;
+    color: var(--color-grey);
+}
+
+.secaoCursos img {
+	display: block;
+	flex-direction: column;
+	max-width: 100px;
+    width: 13vh;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.h2flex-col{
+    margin-top: 40px;
+    padding-bottom: 65px;
+}
+.pflex-col{
+    margin-top: 15px;
+    padding-bottom: 25px;
+}
+
+.ulsecao h3{
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.ulsecao p{
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
 /* FOOTER */
 footer{}
 /* FOOTER */
@@ -97,7 +390,124 @@ main{}
   
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
-  
-    @media screen and (min-width: 800px) {}
+    @media screen and (max-width: 360px){
+        .menu{
+            padding-left: 3rem;
+        }
+    } 
+    @media screen and (min-width: 800px) {
+
+        /* SECAO SOBRE */
+        
+        .secaoSobre h2 {
+            font-size: 24px;
+        }
+
+        .secaoSobre p {
+            font-size: 19px;
+        }
+
+        .secaoSobre ul {
+            width: 700px;
+            padding: 50px
+        }
+
+        .secaoSobre button {
+            width: 150px;
+            margin: 20px 65px 80px 65px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .secaoSobre button:hover {
+            background-color: var(--color-white);
+            transition: initial;
+           
+        }
+
+        
+
+        /* flex-cool inicio */
+       
+       
+        .flex-col {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        
+        .flex-col--destaque1 {
+            justify-content: center;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+        }
+
+        .flex-col--destaque1 img {
+            width: 500px;
+            margin: 30px;
+        }
+
+        .flex-col--destaque2 {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .flex-col--destaque2 img {
+            width: 300px;
+        }
+
+        .flex-col--destaque2 h2 {
+            width: 500px;
+            text-align: center;
+            padding: 5px 60px;
+        }
+        
+        
+       
+
+       /* SECAO--CURSOS */
+          
+    
+       section.secaoCursos{
+            text-align: center;
+        }
+        .secaoCursos article ul{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+        }
+        .secaoCursos ul li{
+            margin-top: 15px;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        .secaoCursos ul li{
+            margin: 50px;
+            font-size: 15px;
+        }
+        .secaoCursos ul li h3{
+            font-size: 19px;
+            color: var(--color-softgrey);
+        }
+        .secaoCursos .h2h2flex-col{
+            margin-top: 40px;
+            color: var(--color-softgrey);
+        }
+        .secaoCursos .pflex-col{
+            color: var(--color-softgrey);
+            margin-top: 25px;
+        }
+        .secaoCursos .ulsecao li img{
+            width: 121px;
+        }
+        .secaoCursos .img{
+            height: auto;
+        }
+
+    }
 /* MEDIA QUERIES */
